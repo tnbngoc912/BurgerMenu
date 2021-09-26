@@ -1,0 +1,243 @@
+body {
+  background: #f5f5f5;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+.header__title {
+  font-size: 30px;
+}
+
+.collapsible__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.container p {
+  font-size: 20px;
+}
+
+.container a:hover:after,
+.container a:focus:after,
+.container a:active:after {
+  width: 100%;
+}
+
+h1 {
+  position: relative;
+  text-align: center;
+}
+
+.header__container-filter {
+  position: fixed;
+  right: 0;
+  height: 17px;
+  width: 35px;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity 0.2s ease;
+}
+.header__container-filter:hover {
+  opacity: 0.7;
+}
+.header__container-filter.active i {
+  display: none;
+}
+.header__container-filter i {
+  display: block;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.header__container-filter span:nth-of-type(2) {
+  top: 11px;
+}
+.header__container-filter span:nth-of-type(3) {
+  top: 22px;
+}
+
+.overlay {
+  position: fixed;
+  width: 80%;
+  background: #fff;
+  top: 0;
+  right: 0;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+.overlay.open {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+  z-index: 1;
+}
+.overlay.open li {
+  animation: fadeInRight 0.5s ease forwards;
+  animation-delay: 0.35s;
+  border-bottom: 1px solid #e6e6e6;
+}
+.overlay.open li:last-child {
+  border: none;
+}
+.overlay.open li:nth-of-type(2) {
+  animation-delay: 0.2s;
+}
+.overlay.open li:nth-of-type(3) {
+  animation-delay: 0.25s;
+}
+.overlay.open li:nth-of-type(4) {
+  animation-delay: 0.3s;
+}
+.overlay nav {
+  position: relative;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: left;
+  padding: 0 20px;
+  max-height: calc(100% - 160px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.overlay ul li {
+  display: block;
+  padding: 20px 0;
+  position: relative;
+  opacity: 0;
+}
+.overlay ul li a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  overflow: hidden;
+  color: #000;
+}
+.overlay ul li a:hover:after,
+.overlay ul li a:focus:after,
+.overlay ul li a:active:after {
+  width: 100%;
+}
+.overlay ul li a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  transform: translateX(-50%);
+  height: 3px;
+  background: #fff;
+  transition: 0.35s;
+}
+
+.wrapper-icon-close {
+  display: none;
+}
+
+.overlay.open ~ .wrapper-icon-close {
+  display: block;
+  width: 80%;
+  position: absolute;
+  right: 27px;
+  z-index: 1000;
+  top: 0px;
+}
+
+.overlay.open ~ .wrapper-icon-close button {
+  background-color: #000;
+  color: #fff;
+}
+
+.overlay__title {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.overlay-mask {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  opacity: 0.6;
+}
+.overlay-mask.enabled {
+  display: initial;
+}
+
+.cta-apply-filter {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.collapsible {
+  cursor: pointer;
+
+  width: 100%;
+  border: none;
+  text-align: left;
+}
+
+.content {
+  display: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.overlay.open .content li {
+  background-color: #fff;
+  font-size: 14px;
+  padding: 10px 20px;
+}
+.overlay.open .content li:first-child {
+  padding-top: 20px;
+}
+.overlay.open .content li:last-child {
+  padding-bottom: 0;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}

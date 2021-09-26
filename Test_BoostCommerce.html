@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test_BoostCommerce</title>
+    <link rel="stylesheet" href="./Test_BoostCommerce.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <p class="header__title">Filter</p>
+      <div class="header__container-filter button_container" id="toggle">
+        <i class="fas fa-filter"></i>
+      </div>
+      <div>
+        <div class="overlay" id="overlay">
+          <p class="overlay__title">Filter</p>
+          <nav>
+            <ul>
+              <li>
+                <div class="collapsible">
+                  <div class="collapsible__title">
+                    <a href="#">Collection</a
+                    ><i class="fas fa-chevron-right"></i>
+                  </div>
+                </div>
+                <div class="content">
+                  <ul>
+                    <li>Collection 1.1</li>
+                    <li>Collection 1.2</li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible">
+                  <div class="collapsible__title">
+                    <a href="#">Brand</a><i class="fas fa-chevron-right"></i>
+                  </div>
+                </div>
+                <div class="content">
+                  <ul>
+                    <li>Brand 1.1</li>
+                    <li>Brand 1.2</li>
+                    <li>Brand 1.3</li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible">
+                  <div class="collapsible__title">
+                    <a href="#">Style</a><i class="fas fa-chevron-right"></i>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible">
+                  <div class="collapsible__title">
+                    <a href="#">Color</a><i class="fas fa-chevron-right"></i>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible">
+                  <div class="collapsible__title">
+                    <a href="#">Size</a><i class="fas fa-chevron-right"></i>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible">
+                  <div class="collapsible__title">
+                    <a href="#">Price</a><i class="fas fa-chevron-right"></i>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible">
+                  <div class="collapsible__title">
+                    <a href="#">Review Ratings</a
+                    ><i class="fas fa-chevron-right"></i>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible">
+                  <div class="collapsible__title">
+                    <a href="#">Percent Sale</a
+                    ><i class="fas fa-chevron-right"></i>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible">
+                  <div class="collapsible__title">
+                    <a href="#">Stock Status</a
+                    ><i class="fas fa-chevron-right"></i>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible">
+                  <div class="collapsible__title">
+                    <a href="#">Material</a><i class="fas fa-chevron-right"></i>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible">
+                  <div class="collapsible__title">
+                    <a href="#">Shape</a><i class="fas fa-chevron-right"></i>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible">
+                  <div class="collapsible__title">
+                    <a href="#">Type</a><i class="fas fa-chevron-right"></i>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible">
+                  <div class="collapsible__title">
+                    <a href="#">Location</a><i class="fas fa-chevron-right"></i>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible">
+                  <div class="collapsible__title">
+                    <a href="#">Year</a><i class="fas fa-chevron-right"></i>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="cta-apply-filter">Show results</div>
+        </div>
+        <div class="wrapper-icon-close">
+          <button class="">X</button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Click Filter</h1>
+    </div>
+    <div class="overlay-mask"></div>
+
+    <script src="./Test_BoostCommerce.js"></script>
+  </body>
+</html>
